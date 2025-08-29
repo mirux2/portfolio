@@ -1,0 +1,285 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+/* ベーススタイル */
+body p {
+  font-size: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+/* 固定背景 */
+.bg-image-clip {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  z-index: -1;
+}
+.bg-image-clip .bg-image-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/free-bg-img.jpg");
+}
+
+/* ナビゲーション */
+header {
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+header .navbar {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+header .navbar .logo {
+  display: inline-block;
+  width: 128px;
+  line-height: 64px;
+  font-weight: bold;
+  font-size: 18px;
+}
+header .navbar .logo a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+header .navbar .nav-links {
+  display: inline-block;
+  float: right;
+  list-style: none;
+  line-height: 64px;
+}
+header .navbar .nav-links li {
+  display: inline-block;
+  padding: 0;
+  float: left;
+}
+header .navbar .nav-links li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar .nav-links li a:hover {
+  color: #f4f4f4;
+  background-color: #333;
+}
+header .navbar .menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hero セクション */
+.hero {
+  height: calc(-64px + 100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  text-align: center;
+  margin-top: 64px;
+}
+.hero .swiper {
+  width: 100%;
+  height: 100%;
+  color: #f4f4f4;
+}
+.hero .swiper .slide1.bg-cover {
+  width: 100%;
+  height: 100%;
+  background-color: rosybrown;
+}
+.hero .swiper .slide1 h1 {
+  font-size: 80px;
+  white-space: nowrap;
+}
+.hero .swiper .slide2 {
+  color: #f4f4f4;
+}
+.hero .swiper .slide2.bg-cover {
+  width: 100%;
+  height: 100%;
+  background-color: #523a3a;
+}
+.hero .swiper .swiper-pagination-bullet-active {
+  background-color: #f4f4f4;
+}
+
+/* 共通セクション */
+.section {
+  position: relative;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+}
+.container .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container .info p {
+  margin-bottom: 5px;
+}
+.container h1 {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+.container h2 {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+/* about */
+#about {
+  color: #f4f4f4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#about ul {
+  margin: 20px auto;
+  list-style: none;
+}
+#about ul li {
+  text-align: left;
+}
+#about ul li a {
+  text-decoration: none;
+  color: rgb(121, 255, 255);
+}
+
+/* Works */
+#works {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f4f4f4;
+}
+#works .container {
+  width: 100%;
+}
+#works .container .info {
+  text-align: center;
+}
+#works .works-cards {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  margin-top: 32px;
+  width: 100%;
+}
+#works .works-cards .work-card {
+  width: 360px;
+  height: 200px;
+  border-radius: 8px;
+  background-color: #222;
+  position: relative;
+  overflow: hidden;
+}
+#works .works-cards .work-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+#works .works-cards .work-card h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s;
+}
+#works .works-cards .work-card:hover {
+  cursor: pointer;
+}
+#works .works-cards .work-card:hover img {
+  opacity: 0.3;
+}
+#works .works-cards .work-card:hover h2 {
+  opacity: 1;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+}
+.skills-list li {
+  background: #0078ff;
+  color: #f4f4f4;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+#contact .mail {
+  margin-top: 24px;
+  text-align: center;
+}
+
+#closing {
+  height: 30vh;
+  color: #f4f4f4;
+  background-color: rosybrown;
+}
+
+/* フッター */
+footer {
+  background: #333;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 15px;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  header .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #f4f4f4;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #f4f4f4;
+  }
+  header .navbar .nav-links.active {
+    display: flex;
+  }
+  header .navbar .menu-toggle {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
