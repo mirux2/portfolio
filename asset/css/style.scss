@@ -7,6 +7,7 @@ $cblack: #333;
   box-sizing: inherit;
   scroll-behavior: smooth;
 }
+
 /* ベーススタイル */
 body {
   p {
@@ -15,6 +16,7 @@ body {
     line-height: 1.6;
   }
 }
+
  /* 固定背景 */
 .bg-image-clip {
   position: absolute;
@@ -35,7 +37,6 @@ body {
     background-image: url("../images/free-bg-img.jpg");
   }
 }
-
 
 /* ナビゲーション */
 header {
@@ -66,13 +67,11 @@ header {
     }
 
     .nav-links {
-      display: inline-block;
       float: right;
       list-style: none;
       line-height: 64px;
 
       li {
-        display: inline-block;
         padding: 0;
         float: left;
         a {
@@ -97,7 +96,6 @@ header {
     }
   }
 }
-
 
 /* Hero セクション */
 .hero {
@@ -154,15 +152,22 @@ header {
   .title {
     text-align: center;
     margin-bottom: 20px;
-  }
-  .info p {
-    margin-bottom: 5px;
-  }
-  h1 {
     font-family: "Fira Sans Condensed", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
+    &.inview {
+      opacity: 1;
+      .char {
+        display: inline-block;
+      }
+    }
+    .char {
+      opacity: 0;
+    }
+  }
+  .info p {
+    margin-bottom: 5px;
   }
   h2 {
     font-family: "Fira Sans Condensed", sans-serif;
@@ -188,6 +193,56 @@ header {
     }
   }
 }
+
+/* Skills */
+#skills {
+  .container {
+    width: 100%;
+    .title {
+      margin-bottom: 32px;
+    }
+    .info {
+      height: 70vh;
+      .skills-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        height: 100%;
+        .lv-container {
+          width: 40%;
+          text-align: center;
+          .lv-title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+          .detail {
+            opacity: 0.7;
+            margin-bottom: 20px;
+          }
+          ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            list-style: none;
+            li {
+              width: 50%;
+              background: $cwhite;
+              color: $cblack;
+              padding: 20px 12px;
+              border: 1px solid $cblack;
+              border-radius: 20px;
+              margin: 10px 0;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Works */
 #works {
   background-color: rgba(0,0,0,0.5);
@@ -239,23 +294,7 @@ header {
   }
 }
 
-/* Skills */
-.skills-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  padding: 0;
-
-  li {
-    background: #0078ff;
-    color: $cwhite;
-    padding: 8px 15px;
-    border-radius: 20px;
-  }
-}
-
+/* contact section */
 #contact {
   .mail {
     margin-top: 24px;
@@ -263,6 +302,7 @@ header {
   }
 }
 
+/* close */
 #closing {
   height: 30vh;
   color: $cwhite;
