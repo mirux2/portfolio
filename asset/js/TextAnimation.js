@@ -1,6 +1,10 @@
 class TextAnimation {
   constructor(el){
-    this.el = document.querySelector(el);
+    if(el instanceof HTMLElement){
+      this.el = el;
+    }else {
+      this.el = document.querySelector(el);
+    }
     this.chars = this.el.innerHTML.trim().split("");
     this.el.innerHTML = this._splitText();
     this.chars = this.el.querySelectorAll(".char");

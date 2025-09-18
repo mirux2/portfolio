@@ -145,6 +145,7 @@ header .navbar .menu-toggle {
   font-weight: 400;
   font-style: normal;
   font-size: 60px;
+  opacity: 0;
 }
 .container .title.inview {
   opacity: 1;
@@ -153,6 +154,9 @@ header .navbar .menu-toggle {
   display: inline-block;
 }
 .container .title .char {
+  opacity: 0;
+}
+.container .info {
   opacity: 0;
 }
 .container .info p {

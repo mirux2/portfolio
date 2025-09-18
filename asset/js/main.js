@@ -14,8 +14,21 @@ document.addEventListener("DOMContentLoaded",function(){
       el: '.swiper-pagination',
     }
   });
-  
+
   //タイトルアニメーション制御
-  const animation = new TextAnimation(".title");
-  animation.animate();
+  //スクロールオブザーバー制御
+  const ta = (el,isIntersecting) => {
+    if(isIntersecting){
+      const title = new TextAnimation(el);
+      title.animate();
+    }
+  }
+  const fa = (el,isIntersecting) => {
+    if(isIntersecting){
+      const float = new floatAnimation(el);
+      float.animate();
+    }
+  }
+  const titleobserver = new ScrollObserver(".title",ta);
+  const floatobserver = new ScrollObserver(".info",fa);
 });

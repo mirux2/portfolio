@@ -156,6 +156,7 @@ header {
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
+    opacity: 0;
     &.inview {
       opacity: 1;
       .char {
@@ -166,8 +167,11 @@ header {
       opacity: 0;
     }
   }
-  .info p {
-    margin-bottom: 5px;
+  .info {
+    opacity: 0;
+    p {
+      margin-bottom: 5px;
+    }
   }
   h2 {
     font-family: "Fira Sans Condensed", sans-serif;
