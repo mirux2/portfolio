@@ -31,4 +31,8 @@ document.addEventListener("DOMContentLoaded",function(){
   }
   const titleobserver = new ScrollObserver(".title",ta);
   const floatobserver = new ScrollObserver(".info",fa);
+
+  //SPA
+  const spa = new SinglePage(".work-cards","#modal","close-btn");
+
 });

@@ -1,154 +1,190 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | hikaru</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./asset/lib/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./asset/css/style.css">
-</head>
-<body>
-  <!-- 背景画像 -->
-  <div class="bg-image-clip">
-    <div class="bg-image-fixed"></div>
-  </div>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#">Portfolio</a>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#">サイトについて</a></li>
-        <li><a href="#about">経歴</a></li>
-        <li><a href="#skills">技術</a></li>
-        <li><a href="#works">制作物</a></li>
-        <li><a href="#contact">連絡先</a></li>
-      </ul>
-      <div class="menu-toggle" id="menuToggle">☰</div>
-    </nav>
-  </header>
-  <!-- Hero セクション -->
-  <section class="hero">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="bg-cover slide1"></div>
-          <div class="container slide1">
-            <h1 class="title">Welcome to my portfolio!</h1>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | hikaru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- 背景画像 -->
+    <div class="bg-image-clip">
+      <div class="bg-image-fixed"></div>
+    </div>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">Portfolio</a>
         </div>
-        <div class="swiper-slide">
-          <div class="bg-cover slide2"></div>
-          <div class="container slide2">
-            <h1 class="title">About this site</h1>
-            <div class="info">
-              <p class="detail">ITエンジニアを目指す学生hikaruのポートフォリオサイトです。</p>
-              <p class="detail">これまでの成果物や自身のスキル等を載せています。</p>
-              <p class="detail">まだまだ未熟者ではありますが、技術力の指標としてご参照いただけると幸いです!</p>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#">サイトについて</a></li>
+          <li><a href="#about">経歴</a></li>
+          <li><a href="#skills">技術</a></li>
+          <li><a href="#works">制作物</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </nav>
+    </header>
+    <!-- Hero セクション -->
+    <section class="hero">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="bg-cover slide1"></div>
+            <div class="container slide1">
+              <h1 class="title">Welcome to my portfolio!</h1>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-cover slide2"></div>
+            <div class="container slide2">
+              <h1 class="title">About this site</h1>
+              <div class="info">
+                <p class="detail">
+                  ITエンジニアを目指す学生hikaruのポートフォリオサイトです。
+                </p>
+                <p class="detail">
+                  これまでの成果物や自身のスキル等を載せています。
+                </p>
+                <p class="detail">
+                  まだまだ未熟者ではありますが、技術力の指標としてご参照いただけると幸いです!
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  <!-- About セクション -->
-  <section id="about" class="section">
-    <div class="container">
-      <h1 class="title">About me</h1>
-      <div class="info">
-        <p class="detail">千葉工業大学情報科学部に所属しています。３年生です。(27卒)</p>
-        <p class="detail">研究室ではインフラ系の勉強をしており、ルータ同士の接続などを実験しています。</p>
-        <p class="detail">高校生の頃に母が昔ブログを運営していたのを見せてもらってから、自分の書いたコードがブラウザ上で動いているのに感銘を受けてITエンジニアに興味が湧きました。</p>
-        <p class="detail">フロントエンド開発やUI/UXに関心があります。ログイン認証などのある本格的なアプリを作りたいので、現在ではバックエンドとデータベースも勉強をしている最中です。</p>
-        <p class="detail">将来的にはフレームワークを使って実用的な開発ができるようになりたいと思っています。</p>
-        <ul>
-          <li>- Quiita: <a href="https://qiita.com/mirux">https://qiita.com/mirux</a></li>
-          <li>- GitHub: <a href="https://github.com/mirux2">https://github.com/mirux2</a></li>
-        </ul>
-        <p></p>
+    </section>
+    <!-- About セクション -->
+    <section id="about" class="section">
+      <div class="container">
+        <h1 class="title">About me</h1>
+        <div class="info">
+          <p class="detail">
+            千葉工業大学情報科学部に所属しています。３年生です。(27卒)
+          </p>
+          <p class="detail">
+            研究室ではインフラ系の勉強をしており、ルータ同士の接続などを実験しています。
+          </p>
+          <p class="detail">
+            高校生の頃に母が昔ブログを運営していたのを見せてもらってから、自分の書いたコードがブラウザ上で動いているのに感銘を受けてITエンジニアに興味が湧きました。
+          </p>
+          <p class="detail">
+            フロントエンド開発やUI/UXに関心があります。ログイン認証などのある本格的なアプリを作りたいので、現在ではバックエンドとデータベースも勉強をしている最中です。
+          </p>
+          <p class="detail">
+            将来的にはフレームワークを使って実用的な開発ができるようになりたいと思っています。
+          </p>
+          <ul>
+            <li>
+              - Quiita:
+              <a href="https://qiita.com/mirux">https://qiita.com/mirux</a>
+            </li>
+            <li>
+              - GitHub:
+              <a href="https://github.com/mirux2">https://github.com/mirux2</a>
+            </li>
+          </ul>
+          <p></p>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Skills セクション -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h1 class="title">Skills</h1>
-      <div class="info">
-        <div class="skills-list">
-          <div class="lv-container">
-            <h2 class="lv-title">lv.1</h2>
-            <p class="detail">現在勉強している、軽く触れたことがあるレベル</p>
-            <div class="skills">
+    </section>
+    <!-- Skills セクション -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h1 class="title">Skills</h1>
+        <div class="info">
+          <div class="skills-list">
+            <div class="lv-container">
+              <h2 class="lv-title">lv.1</h2>
+              <p class="detail">現在勉強している、軽く触れたことがあるレベル</p>
+              <div class="skills">
+                <ul>
+                  <li class="skill">React</li>
+                  <li class="skill">AWS</li>
+                  <li class="skill">Docker</li>
+                  <li class="skill">spring</li>
+                </ul>
+              </div>
+            </div>
+            <div class="lv-container">
+              <h2 class="lv-title">lv.2</h2>
+              <p class="detail">
+                参照しながら使える、簡単な開発ならできるレベル
+              </p>
               <ul>
-                <li class="skill">React</li>
-                <li class="skill">AWS</li>
-                <li class="skill">Docker</li>
-                <li class="skill">spring</li>
+                <li class="skill">HTML / CSS</li>
+                <li class="skill">Javascript</li>
+                <li class="skill">git / github</li>
               </ul>
             </div>
           </div>
-          <div class="lv-container">
-            <h2 class="lv-title">lv.2</h2>
-            <p class="detail">参照しながら使える、簡単な開発ならできるレベル</p>
-            <ul>
-              <li class="skill">HTML / CSS</li>
-              <li class="skill">Javascript</li>
-              <li class="skill">git / github</li>
-            </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Works セクション -->
+    <section id="works" class="section">
+      <div class="container">
+        <h1 class="title">Works</h1>
+        <div class="info">
+          <p class="detail">制作物一覧です。</p>
+          <p class="detail">バックエンドも勉強中ですので少々お待ちを...</p>
+          <div class="works-cards">
+            <div class="work-card" data-detail="./pages/portfolio.html">
+              <img src="./asset/images/portfolio.jpeg" />
+              <h2>portfolio</h2>
+            </div>
+            <div class="work-card" data-detail="./pages/comingsoon.html">
+              <h2>coming soon...</h2>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+    <div id="modal">
+      <div class="modal-content">
+        <button class="close-btn">x</button>
+      </div>
     </div>
-  </section>
-  <!-- Works セクション -->
-  <section id="works" class="section">
-    <div class="container">
-      <h1 class="title">Works</h1>
-      <div class="info">
-        <p class="detail">制作物一覧です。</p>
-        <p class="detail">バックエンドも勉強中ですので少々お待ちを...</p>
-        <div class="works-cards">
-          <div class="work-card">
-            <img src="./asset/images/portfolio.jpeg">
-            <h2>portfolio</h2>
-          </div>
-          <div class="work-card">
-            <h2>coming soon...</h2>
-          </div>
+    <!-- Contact セクション -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h1 class="title">Contact</h1>
+        <div class="info">
+          <p class="detail">最後までご覧いただき、ありがとうございます。</p>
+          <p class="detail">
+            サイトについてのご意見やご連絡は、下記のメールアドレスまでお気軽にお寄せください。
+          </p>
+          <p class="detail">
+            ※ 都合により、ご返信にお時間をいただく場合がございます。
+          </p>
+          <p class="mail">Email: hika348348@gmail.com</p>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Contact セクション -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h1 class="title">Contact</h1>
-      <div class="info">
-        <p class="detail">最後までご覧いただき、ありがとうございます。</p>
-        <p class="detail">サイトについてのご意見やご連絡は、下記のメールアドレスまでお気軽にお寄せください。</p>
-        <p class="detail">※ 都合により、ご返信にお時間をいただく場合がございます。</p>
-        <p class="mail">Email: hika348348@gmail.com</p>
+    </section>
+    <!-- closing セクション -->
+    <section id="closing" class="section">
+      <div class="container">
+        <h1 class="title">Thank you for visiting!</h1>
       </div>
-    </div>
-  </section>
-  <!-- closing セクション -->
-  <section id="closing" class="section">
-    <div class="container">
-      <h1 class="title">Thank you for visiting!</h1>
-    </div>
-  </section>
-  <footer>
-    <p>&copy; 2025 Hikaru Adachi</p>
-  </footer>
-  <script src="./asset/lib/swiper/swiper-bundle.min.js"></script>
-  <script src="asset/node_modules/gsap/dist/gsap.min.js"></script>
-  <script src="asset/js/TextAnimation.js"></script>
-  <script src="asset/js/floatAnimation.js"></script>
-  <script src="asset/js/scroll.js"></script>
-  <script src="asset/js/main.js"></script>
-</body>
+    </section>
+    <footer>
+      <p>&copy; 2025 Hikaru Adachi</p>
+    </footer>
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/gsap/dist/gsap.min.js"></script>
+    <script src="./js/TextAnimation.js"></script>
+    <script src="./js/floatAnimation.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

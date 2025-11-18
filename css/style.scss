@@ -12,12 +12,12 @@ $cblack: #333;
 body {
   p {
     font-size: 18px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     line-height: 1.6;
   }
 }
 
- /* 固定背景 */
+/* 固定背景 */
 .bg-image-clip {
   position: absolute;
   top: 0px;
@@ -25,7 +25,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 230px;
-  // clip-path: inset(0); 
+  // clip-path: inset(0);
   z-index: -1;
   .bg-image-fixed {
     position: fixed;
@@ -34,7 +34,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url("../images/free-bg-img.jpg");
+    background-image: url("../asset/images/free-bg-img.jpg");
   }
 }
 
@@ -47,7 +47,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  
+
   .navbar {
     width: 70%;
     height: 100%;
@@ -107,16 +107,16 @@ header {
   background: $cwhite;
   text-align: center;
   margin-top: 64px;
-  
+
   & .swiper {
     width: 100%;
     height: 100%;
     color: $cwhite;
     & .slide1 {
       &.bg-cover {
-      width: 100%;
-      height: 100%;
-      background-color: rosybrown;
+        width: 100%;
+        height: 100%;
+        background-color: rosybrown;
       }
       h1 {
         font-size: 80px;
@@ -131,7 +131,7 @@ header {
         background-color: #523a3a;
       }
     }
-    & .swiper-pagination-bullet-active{
+    & .swiper-pagination-bullet-active {
       background-color: $cwhite;
     }
   }
@@ -143,11 +143,11 @@ header {
   height: 100vh;
   background-color: $cwhite;
 }
-.container{
+.container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 200;
   .title {
     text-align: center;
@@ -184,7 +184,7 @@ header {
 /* about */
 #about {
   color: $cwhite;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   ul {
     margin: 20px auto;
     list-style: none;
@@ -238,7 +238,6 @@ header {
               border: 1px solid $cblack;
               border-radius: 20px;
               margin: 10px 0;
-
             }
           }
         }
@@ -249,7 +248,7 @@ header {
 
 /* Works */
 #works {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: $cwhite;
   .container {
     width: 100%;
@@ -281,7 +280,7 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         opacity: 0;
         transition: all 0.2s;
       }
@@ -296,6 +295,35 @@ header {
       }
     }
   }
+}
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  background: none;
+  cursor: pointer;
 }
 
 /* contact section */
