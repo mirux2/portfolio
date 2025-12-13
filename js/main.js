@@ -29,7 +29,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
   const titleobserver = new ScrollObserver(".title", ta);
-  const floatobserver = new ScrollObserver(".info", fa);
-
-  //SPA
+  const floatobserver = new ScrollObserver(".stagger", fa);
 });

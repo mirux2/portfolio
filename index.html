@@ -20,6 +20,11 @@
     </div>
     <header>
       <nav class="navbar">
+        <div class="menu-toggle" id="menuToggle">
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+        </div>
         <div class="logo">
           <a href="#">Portfolio</a>
         </div>
@@ -30,7 +35,6 @@
           <li><a href="#works">制作物</a></li>
           <li><a href="#contact">連絡先</a></li>
         </ul>
-        <div class="menu-toggle" id="menuToggle">☰</div>
       </nav>
     </header>
     <!-- Hero セクション -->
@@ -47,7 +51,7 @@
             <div class="bg-cover slide2"></div>
             <div class="container slide2">
               <h1 class="title">About this site</h1>
-              <div class="info">
+              <div class="info stagger">
                 <p class="detail">
                   ITエンジニアを目指す学生hikaruのポートフォリオサイトです。
                 </p>
@@ -68,7 +72,7 @@
     <section id="about" class="section">
       <div class="container">
         <h1 class="title">About me</h1>
-        <div class="info">
+        <div class="info stagger">
           <p class="detail">
             千葉工業大学情報科学部に所属しています。３年生です。(27卒)
           </p>
@@ -107,21 +111,19 @@
             <div class="lv-container">
               <h2 class="lv-title">lv.1</h2>
               <p class="detail">現在勉強している、軽く触れたことがあるレベル</p>
-              <div class="skills">
-                <ul>
-                  <li class="skill">React</li>
-                  <li class="skill">AWS</li>
-                  <li class="skill">Docker</li>
-                  <li class="skill">spring</li>
-                </ul>
-              </div>
+              <ul class="stagger">
+                <li class="skill">React</li>
+                <li class="skill">AWS</li>
+                <li class="skill">Typescript</li>
+                <li class="skill">spring</li>
+              </ul>
             </div>
             <div class="lv-container">
               <h2 class="lv-title">lv.2</h2>
               <p class="detail">
                 参照しながら使える、簡単な開発ならできるレベル
               </p>
-              <ul>
+              <ul class="stagger">
                 <li class="skill">HTML / CSS</li>
                 <li class="skill">Javascript</li>
                 <li class="skill">git / github</li>
@@ -135,7 +137,7 @@
     <section id="works" class="section">
       <div class="container">
         <h1 class="title">Works</h1>
-        <div class="info">
+        <div class="info stagger">
           <p class="detail">制作物一覧です。</p>
           <p class="detail">バックエンドも勉強中ですので少々お待ちを...</p>
           <div class="works-cards">
@@ -154,7 +156,7 @@
     <section id="contact" class="section">
       <div class="container">
         <h1 class="title">Contact</h1>
-        <div class="info">
+        <div class="info stagger">
           <p class="detail">最後までご覧いただき、ありがとうございます。</p>
           <p class="detail">
             サイトについてのご意見やご連絡は、下記のメールアドレスまでお気軽にお寄せください。
