@@ -4,7 +4,7 @@ $cblack: #333;
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -70,7 +70,6 @@ header {
     .nav-links {
       list-style: none;
       line-height: 64px;
-
       li {
         padding: 0;
         float: left;
@@ -91,8 +90,8 @@ header {
 
     .menu-toggle {
       display: none;
-      cursor: pointer;
-      font-size: 24px;
+      border: none;
+      background-color: $cwhite;
     }
   }
 }
@@ -119,7 +118,6 @@ header {
         background-color: rosybrown;
       }
       h1 {
-        font-size: 80px;
         white-space: nowrap;
       }
     }
@@ -172,7 +170,7 @@ header {
       margin-bottom: 5px;
     }
   }
-  h2 {
+  .lv-title {
     font-family: "Fira Sans Condensed", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -208,7 +206,6 @@ header {
       margin-bottom: 32px;
     }
     .info {
-      height: 70vh;
       .skills-list {
         list-style: none;
         display: flex;
@@ -353,11 +350,15 @@ footer {
 
 /* スマホ対応 */
 @media (max-width: 768px) {
+  body p {
+    font-size: 14px;
+  }
+  /* ヘッダー */
   header {
     .navbar {
       align-items: center;
       .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         background: $cwhite;
         position: absolute;
@@ -365,9 +366,13 @@ footer {
         right: 0;
         width: 100%;
         border-left: 1px solid $cwhite;
-
+        opacity: 0;
+        transition: all 0.2s;
+        visibility: hidden;
         &.active {
           display: flex;
+          opacity: 1;
+          visibility: visible;
         }
         & li {
           border-bottom: rgba(0, 0, 0, 0.3) solid 0.1px;
@@ -385,12 +390,98 @@ footer {
       .menu-toggle {
         display: block;
         width: 28px;
-        & .menu-bar {
+        background-color: white;
+        cursor: pointer;
+        & span {
+          display: block;
           width: 100%;
-          height: 4px;
-          margin-bottom: 4px;
+          height: 2px;
+          margin-bottom: 9px;
           background-color: $cblack;
+          transition: transform 0.3s;
+          &:last-child {
+            margin: 0;
+          }
         }
+        &.active > span {
+          &:nth-child(1) {
+            transition-delay: 70ms;
+            transform: translateY(11px) rotate(135deg);
+          }
+          &:nth-child(2) {
+            transition-delay: 0s;
+            transform: translateX(-18px) scaleX(0);
+          }
+          &:nth-child(3) {
+            transition-delay: 140ms;
+            transform: translateY(-11px) rotate(-135deg);
+          }
+        }
+      }
+    }
+  }
+  /* 共通 */
+  .section {
+    height: auto !important;
+    padding: 30px 60px;
+  }
+
+  .container {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+  .container {
+    margin: 24px 0;
+    .title {
+      font-size: 36px;
+      margin-bottom: 12px !important;
+    }
+  }
+
+  /* hero */
+  .hero {
+    height: calc(-64px + 100vh);
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 200;
+    }
+  }
+
+  /* skills */
+  #skills {
+    & .container {
+    }
+    & .skills-list {
+      flex-direction: column;
+      & .lv-container {
+        width: 100% !important;
+        margin: 24px 0;
+        border-top: $cblack dashed 1px;
+      }
+    }
+    .lv-title {
+      font-size: 28px;
+    }
+  }
+  /* works */
+  #works {
+    & .works-cards {
+      flex-direction: column;
+      & .work-card {
+        margin-bottom: 80px;
+      }
+    }
+  }
+  /* closing */
+  #closing {
+    & .container {
+      & .title {
+        font-size: 24px;
       }
     }
   }

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelector("#navLinks");
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("active");
   });
 
   // ヒーロースライダー制御
