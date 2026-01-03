@@ -148,6 +148,7 @@ header .navbar .menu-toggle {
   font-style: normal;
   font-size: 60px;
   opacity: 0;
+  white-space: nowrap;
 }
 .container .title.inview {
   opacity: 1;
@@ -183,6 +184,7 @@ header .navbar .menu-toggle {
 }
 #about ul li {
   text-align: left;
+  white-space: nowrap;
 }
 #about ul li a {
   text-decoration: none;
@@ -414,8 +416,6 @@ footer {
     transform: none;
     top: auto;
     left: auto;
-  }
-  .container {
     margin: 24px 0;
   }
   .container .title {
@@ -433,6 +433,7 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 200;
   }
+  /* about */
   /* skills */
   #skills .skills-list {
     flex-direction: column;

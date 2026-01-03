@@ -156,6 +156,7 @@ header {
     font-style: normal;
     font-size: 60px;
     opacity: 0;
+    white-space: nowrap;
     &.inview {
       opacity: 1;
       .char {
@@ -191,6 +192,7 @@ header {
     list-style: none;
     li {
       text-align: left;
+      white-space: nowrap;
       a {
         text-decoration: none;
         color: rgb(121, 255, 255);
@@ -426,14 +428,11 @@ footer {
     height: auto !important;
     padding: 30px 60px;
   }
-
   .container {
     position: static;
     transform: none;
     top: auto;
     left: auto;
-  }
-  .container {
     margin: 24px 0;
     .title {
       font-size: 36px;
@@ -452,7 +451,9 @@ footer {
       z-index: 200;
     }
   }
-
+  /* about */
+  #about {
+  }
   /* skills */
   #skills {
     & .container {
