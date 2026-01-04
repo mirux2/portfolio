@@ -27,7 +27,7 @@ body {
   height: 100%;
   min-height: 230px;
   // clip-path: inset(0);
-  z-index: -1;
+  z-index: -1000;
   .bg-image-fixed {
     position: fixed;
     top: 0;
@@ -36,6 +36,24 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url("../asset/images/free-bg-img.jpg");
+  }
+}
+
+/* カバー */
+.curtain {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  background-color: $cblack;
+  opacity: 0;
+  pointer-events: none;
+  &.active {
+    opacity: 0.5;
+    pointer-events: auto;
   }
 }
 
@@ -48,6 +66,9 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
+  &.active {
+    opacity: 1;
+  }
 
   .navbar {
     display: flex;
@@ -214,8 +235,6 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 0;
-        height: 100%;
         .lv-container {
           width: 40%;
           text-align: center;
@@ -233,13 +252,13 @@ header {
             flex-direction: column;
             list-style: none;
             li {
-              width: 50%;
+              width: 40%;
               background: $cwhite;
               color: $cblack;
               padding: 20px 12px;
               border: 1px solid $cblack;
               border-radius: 20px;
-              margin: 10px 0;
+              margin: 10px;
             }
           }
         }
@@ -464,6 +483,12 @@ footer {
         width: 100% !important;
         margin: 24px 0;
         border-top: $cblack dashed 1px;
+        ul {
+          flex-direction: row !important;
+          flex-wrap: wrap;
+          li {
+          }
+        }
       }
     }
     .lv-title {
